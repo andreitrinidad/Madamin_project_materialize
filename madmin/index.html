@@ -4,6 +4,8 @@
 <head>
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link type="text/css" rel="stylesheet" href="css/main.css" />
@@ -25,7 +27,8 @@
           <li class="active"><a href="index.html">Dashboard</a></li>
           <li class=""><a href="posts.html">Posts</a></li>
           <li class=""><a href="categories.html">Categories</a></li>
-          <li class=""><a href="comments">Users</a></li>
+          <li class=""><a href="comments.html">Comments</a></li>
+          <li class=""><a href="users.html">Users</a></li>
         </ul>
 
 
@@ -33,7 +36,7 @@
     </div>
   </nav>
 
-
+<!-- SIDENAV -->
   <ul id="side-nav" class="side-nav">
     <li class="user-view">
       <div class="background"><img src="img/ocean.jpg" alt=""></div>
@@ -44,7 +47,8 @@
     <li><a href="posts.html"><i class="material-icons">dashboard</i>Dashboard</a></li>
     <li class=""><a href="posts.html">Posts</a></li>
     <li class=""><a href="categories.html">Categories</a></li>
-    <li class=""><a href="comments">Users</a></li>
+    <li class=""><a href="comments.html">Comments</a></li>
+    <li class=""><a href="users.html">Users</a></li>
     <li>
       <div class="divider"></div>
     </li>
@@ -58,7 +62,7 @@
       <div class="col s12 m6 l3">
         <div class="card-panel blue lighten-1 white-text center">
           <i class="material-icons medium">insert_emoticon</i>
-          <h5>Monthly Visitor</h5>
+          <h6>Monthly Visitor</h6>
           <h3 class="count">283000</h3>
           <div class="progress grey lighten-1">
             <div class="determinate white" style="width: 70%;"></div>
@@ -68,7 +72,7 @@
       <div class="col s12 m6 l3">
         <div class="card-panel center">
           <i class="material-icons medium">mode_edit</i>
-          <h5>Blog Post</h5>
+          <h6>Blog Post</h6>
           <h3 class="count">105</h3>
           <div class="progress grey lighten-1">
             <div class="determinate blue" style="width: 23%;"></div>
@@ -78,7 +82,7 @@
       <div class="col s12 m6 l3">
         <div class="card-panel blue lighten-1 white-text center">
           <i class="material-icons medium">mode_comment</i>
-          <h5>Comments</h5>
+          <h6>Comments</h6>
           <h3 class="count">1200</h3>
           <div class="progress grey lighten-1">
             <div class="determinate white" style="width: 98%;"></div>
@@ -88,7 +92,7 @@
       <div class="col s12 m6 l3">
         <div class="card-panel center">
           <i class="material-icons medium">supervisor_account</i>
-          <h5>Users</h5>
+          <h6>Users</h6>
           <h3 class="count">350</h3>
           <div class="progress grey lighten-1">
             <div class="determinate blue" style="width: 40%;"></div>
@@ -98,11 +102,198 @@
     </div>
   </section>
 
+  <!-- SECTION VISITOR -->
+  <section class="section section-visitor blue lighten-4">
+    <div class="row">
+      <div class="col s12 m6 l8">
+        <div class="card-panel">
+          <div id="chartContainer" style="height: 300px; width: 100%"></div>
+        </div>
+      </div>
+
+      <div class="col s12 m6 l4">
+        <div class="card-panel">
+          <!-- latest comments -->
+          <ul class="collection with-header latest-comments">
+            <li class="collection-header">
+              <h5>Latest Comments</h5>
+            </li>
+            <li class="collection-item avatar">
+              <img src="img/person1.jpg" alt="" class="circle"><span class="title">Tyrion Lannister</span>
+              <p class="truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error delectus quidem
+                dolores omnis, illo quod a distinctio inventore non pariatur consequuntur, nemo sequi voluptatem, et
+                repellendus saepe amet expedita! Ab!</p>
+              <div class="divider"></div>
+              <a class=" approve green-text"><i class="fas fa-check"></i> Approve</a>
+              <a class="right deny red-text"><i class="fas fa-times"></i> Deny</a>
+            </li>
+            <li class="collection-item avatar">
+              <img src="img/person2.jpg" alt="" class="circle"><span class="title">Juan Nyebe</span>
+              <p class="truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error delectus quidem
+                dolores omnis, illo quod a distinctio inventore non pariatur consequuntur, nemo sequi voluptatem, et
+                repellendus saepe amet expedita! Ab!</p>
+              <div class="divider"></div>
+              <a class=" approve green-text"><i class="fas fa-check"></i> Approve</a>
+              <a class="right deny red-text"><i class="fas fa-times"></i> Deny</a>
+            </li>
+            <li class="collection-item avatar">
+              <img src="img/person3.jpg" alt="" class="circle"><span class="title">Gina Call</span>
+              <p class="truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error delectus quidem
+                dolores omnis, illo quod a distinctio inventore non pariatur consequuntur, nemo sequi voluptatem, et
+                repellendus saepe amet expedita! Ab!</p>
+              <div class="divider"></div>
+              <a class=" approve green-text"><i class="fas fa-check"></i> Approve</a>
+              <a class="right deny red-text"><i class="fas fa-times"></i> Deny</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent posts and todos -->
+  <section class="section section-recent">
+    <div class="row">
+      <div class="col s12 m6 l8">
+        <div class="card">
+          <div class="card-content"><span class="card-title">Recent Posts</span>
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Post One</td>
+                  <td>Web Dev</td>
+                  <td><a href="details.html" class="btn blue lighten-2">Details</a></td>
+                </tr>
+                <tr>
+                  <td>Post Two</td>
+                  <td>Graphic Design</td>
+                  <td><a href="details.html" class="btn blue lighten-2">Details</a></td>
+                </tr>
+                <tr>
+                  <td>Post Three</td>
+                  <td>Web Design</td>
+                  <td><a href="details.html" class="btn blue lighten-2">Details</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Quick Todos</span>
+            <form id="todo-form">
+              <div class="input-field">
+                <input type="text" id="todo" placeholder="Add To Do">
+                <ul class="collection todos">
+                  <li class="collection-item">
+                    <div>
+                      Todo One
+                      <a href="#!" class="secondary-content delete"><i class="material-icons">close</i></a>
+                    </div>
+                  </li>
+                  <li class="collection-item">
+                    <div>
+                      Todo Two
+                      <a href="#!" class="secondary-content delete"><i class="material-icons">close</i></a>
+                    </div>
+                  </li>
+                  <li class="collection-item">
+                    <div>
+                      Todo Three
+                      <a href="#!" class="secondary-content delete"><i class="material-icons">close</i></a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="section blue darken-2 white-text center">
+    <p>Madmin Panel Copyright &copy; 2019</p>
+  </footer>
+
+  <!-- fixed action button -->
+  <div class="fixed-action-btn">
+    <a href="" class="btn-floating btn-large red">
+      <i class="material-icons">add</i>
+    </a>
+    <ul>
+      <li><a class="modal-trigger btn-floating blue" href="#post-modal"><i class="material-icons">mode_edit</i></a></li>
+      <li><a class="modal-trigger btn-floating blue" href="#category-modal"><i class="material-icons">folder</i></a></li>
+      <li><a class="modal-trigger btn-floating blue" href="#user-modal"><i class="material-icons">supervisor_account</i></a></li>
+    </ul>
+  </div>
+
+  <!-- post modal -->
+  <div id="post-modal" class="modal">
+    <div class="modal-content">
+      <h4>Add post</h4>
+      <form action="">
+        <div class="input-field"><input type="text" id="title"><label for="">Title</label></div>
+        <div class="input-field">
+          <select>
+            <option value="" disabled selected>Select Option</option>
+            <option value="1">Web Development</option>
+            <option value="2">Graphic Design</option>
+            <option value="3">Creative Web</option>
+            <option value="4">COther</option>
+          </select>
+          <label>Category</label>
+        </div>
+        <div class="input-field">
+          <textarea id="body" class="materialize-textarea"></textarea>
+          <!-- <label>Body</label> -->
+        </div>
+      </form>
+
+    </div>
+    <div class="modal-footer"><a href="#!" class="modal-action modal-close btn blue white-text">Submit</a></div>
+  </div>
+
+  <!-- ADD CATEGORY MODAL -->
+  <div id="category-modal" class="modal">
+    <div class="modal-content">
+      <h4>Add category</h4>
+      <form action="">
+        <div class="input-field"><input type="text" id="title"><label for="">Title</label></div>
+      </form>
+    </div>
+    <div class="modal-footer"><a href="#!" class="modal-action modal-close btn blue white-text">Submit</a></div>
+  </div>
+
+  <!-- ADD USER MODAL -->
+  <div id="user-modal" class="modal">
+      <div class="modal-content">
+        <h4>Add User</h4>
+        <form action="">
+          <div class="input-field"><input type="text" id="name"><label for="">Name</label></div>
+          <div class="input-field"><input type="email" id="email"><label for="">Email</label></div>
+          <div class="input-field"><input type="password" id="password"><label for="">Password</label></div>
+          <div class="input-field"><input type="password" id="password2"><label for="">Confirm Password</label></div>
+        </form>
+      </div>
+      <div class="modal-footer"><a href="#!" class="modal-action modal-close btn blue white-text">Submit</a></div>
+    </div>
+
+  <!-- PRELOADER -->
   <div class="loader preloader-wrapper big active">
     <div class="spinner-layer spinner-blue-only">
       <div class="circle-clipper left">
         <div class="circle">
-
         </div>
       </div>
       <div class="gap-patch">
@@ -114,41 +305,99 @@
     </div>
   </div>
 
+
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="js/chart.js"></script>
+  <!-- <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script> -->
+  <script src="https://cdn.ckeditor.com/ckeditor5/12.0.0/classic/ckeditor.js"></script>
   <script>
+    //CKEDITOR
+    ClassicEditor
+      .create(document.querySelector('#body'))
+      .then(editor => {
+        console.log(editor);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+
+
     $('.section').hide();
     //HIDE SECTION
-    setTimeout(function(){
+    setTimeout(function () {
 
 
-    $(document).ready(function () {
-      //Init Side nav
-      $('.sidenav-trigger').sideNav();
+      $(document).ready(function () {
+        //Init Side nav
+        $('.sidenav-trigger').sideNav();
 
-      //HIDE SECTION
+        //HIDE SECTION
 
-      $('.section').fadeIn();
+        $('.section').fadeIn();
 
-      //HIDE PRELOADER
-      $('.loader').fadeOut();
+        //HIDE PRELOADER
+        $('.loader').fadeOut();
 
-      //COUNTER
-      $('.count').each(function () {
-        $(this).prop('counter', 0).animate({
-          counter: $(this).text()
-        }, {
-          duration: 1000,
-          easing: 'swing',
-          step: function (now) {
-            $(this).text(Math.ceil(now));
-          }
+        //COUNTER
+        $('.count').each(function () {
+          $(this).prop('counter', 0).animate({
+            counter: $(this).text()
+          }, {
+            duration: 1000,
+            easing: 'swing',
+            step: function (now) {
+              $(this).text(Math.ceil(now));
+            }
+          });
+        }, 1000);
+
+        //TOAST
+        $('.approve').click(function (e) {
+          Materialize.toast('Comment has been approved', 3000);
+          e.preventDefault();
         });
-      }, 1000);
-    });
+        $('.deny').click(function (e) {
+          Materialize.toast('Comment has been denied', 3000);
+          e.preventDefault();
+        });
 
-  }, 1000);
+
+        //TODO
+        $('#todo-form').submit(function (e) {
+          const output = `
+            <li class="collection-item">
+              <div>
+                ${$('#todo').val()}
+                <a href="#!" class="secondary-content delete"><i class="material-icons">close</i></a>
+              </div>
+          `;
+          $('.todos').append(output);
+          $('#todo').val("");
+          Materialize.toast('Todo Added.', 3000, 'rounded');
+          e.preventDefault();
+        });
+
+
+        // $('.delete').click(function(e){
+        //   $(event.target).parents('.collection-item').remove();
+        //   e.preventDefault();
+        // });
+
+        $('.todos').on('click', '.delete', function (e) {
+          $(this).parents('li').remove();
+          Materialize.toast('Todo Deleted.', 3000, 'rounded');
+        });
+
+        $('.modal').modal();
+        $('select').material_select();
+
+
+      });
+
+    }, 1000);
   </script>
 </body>
 
